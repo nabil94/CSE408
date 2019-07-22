@@ -83,13 +83,13 @@ class DashBoardController extends Controller
     public function cancelroom($id)
     {
         $post= Post::find($id);
+        DB::table('notification')->insert(
+           ['user_id' => auth()->user()->id, 'user_name' => auth()->user()->name, 'guest_id' => $post->hostid, 'guest_name' => $post->hostname, 'room_id' => $post->id, 'room_name' => $post->title, 'status' => 'cancel']);
+        //$post->booking="booked";
         $post->booking="";
         $post->hostname="";
         $post->hostid="";
         $post->save();
-        DB::table('notification')->insert(
-           ['user_id' => auth()->user()->id, 'user_name' => auth()->user()->name, 'guest_id' => $post->hostid, 'guest_name' => $post->hostname, 'room_id' => $post->id, 'room_name' => $post->title, 'status' => 'cancel']);
-        $post->booking="booked";
         return redirect('/dashboard/requestroom');
 
     }

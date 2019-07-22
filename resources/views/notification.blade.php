@@ -10,7 +10,6 @@
    <table class="table table-bordered">
    	<thead>
    		<tr>
-   			<th>No</th>
    			<th>News</th>
    		</tr>
    	</thead>
@@ -18,12 +17,11 @@
    		@foreach($posts as $post)
          @if($post->status == 'confirm')
    		   <tr>
-   			     <td>{{$post->id}}</td>
-   			       <td>{{$post->user_name}} has accepted your request. He takes {{$post->room_name}}</td>
+
+   			       <td><div class="alert alert-info">{{$post->user_name}} has accepted your request</div></td>
           @endif
           @if($post->status == 'cancel')
           <tr>
-              <td>{{$post->id}}</td>
                 <td>{{$post->user_name}} has denied your request</td>
            @endif
 
