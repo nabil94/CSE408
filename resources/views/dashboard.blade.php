@@ -47,6 +47,9 @@
                         <div class="col-md-8 text-left">
                             <a href="dashboard/occupiedroom" class="btn btn-primary">Ocuupied Room</a>
                         </div>
+                        <div class="col-md-8 text-right">
+                            <a href="dashboard/hasRoom" class="btn btn-primary">My accepted Room</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -103,6 +103,8 @@ class PostsController extends Controller
         $post->room_no=$request->input('room_no');
         $post->max_people=$request->input('max_people');
         $post->location=$request->input('location');
+        $post->road=$request->input('road');
+        $post->sector=$request->input('sector');
         $post->cost_basis=$request->input('cost_basis');
         $post->cost=$request->input('cost');
         $post->from_date=$request->input('from_date');
@@ -110,6 +112,7 @@ class PostsController extends Controller
         $post->contact=$request->input('contact');
         $post->cover_image=$fileNameToStore;
         $post->save();
+
         return redirect('/posts')->with('success','Post Created');
     }
 

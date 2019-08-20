@@ -42,6 +42,7 @@ Route::get('/services','PagesController@services');
 // });
 Route::get('/search','PostsController@search');
 Route::get('/notify','DashboardController@notify');
+Route::get('/dashboard/hasRoom','DashboardController@hasRoom');
 Route::get('/wlogs','DashboardController@logs');
 Route::resource('posts','PostsController');
 Auth::routes();

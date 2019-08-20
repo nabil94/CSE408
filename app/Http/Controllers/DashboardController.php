@@ -112,6 +112,18 @@ class DashBoardController extends Controller
         return view('occupiedroom')->with('posts',$posts);
     }
 
+
+    public function hasRoom(Request $request)
+    {
+      $ind=0;
+
+      $user_id=auth()->user()->id;
+      $posts = Post::where([['booking', '=', 'booked'],['hostid', '=', $user_id]])->get();
+
+      return view('hasRoom')->with('posts',$posts);
+
+
+    }
     /*public function ProfileUpdate(Request $request, $id)
     {
         //

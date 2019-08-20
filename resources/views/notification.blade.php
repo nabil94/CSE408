@@ -22,7 +22,7 @@
           @endif
           @if($post->status == 'cancel')
           <tr>
-                <td>{{$post->user_name}} has denied your request</td>
+                <td><div class="alert alert-info">{{$post->user_name}} has denied your request</div></td>
            @endif
 
    		@endforeach

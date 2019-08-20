@@ -41,6 +41,12 @@
         <div class="col-md-4">
         {{Form::text('location','',['class'=>'form-control','placeholder'=>'Location'])}}
         </div>
+        <div class="col-md-4">
+        {{Form::text('road','',['class'=>'form-control','placeholder'=>'Road no'])}}
+        </div>
+        <div class="col-md-4">
+        {{Form::text('sector','',['class'=>'form-control','placeholder'=>'Sector no'])}}
+        </div>
     </div>
 
      <div class="form-group row">
@@ -93,7 +99,7 @@
    </div>
     </div>
 	{{Form::submit('Submit',['class'=>'btn btn-primary'])}}
-{{ Form::close() }} 
+{{ Form::close() }}
 </div>
 </div>
 </div>
